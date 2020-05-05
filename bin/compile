@@ -4,6 +4,15 @@
 # fail fast
 set -e
 
+title() {
+  echo "-----> $*"
+}
+
+subtitle() {
+  echo "       $*"
+}
+
+
 # parse params
 BUILD_DIR=$1
 CACHE_DIR=$2
