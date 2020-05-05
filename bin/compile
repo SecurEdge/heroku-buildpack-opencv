@@ -45,4 +45,4 @@ echo '!'
 
 ls /app/vendor/opencv/lib
 
-LD_LIBRARY_PATH=/app/.heroku/vendor/lib/
+export LD_LIBRARY_PATH=/app/.heroku/vendor/lib/
