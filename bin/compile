@@ -36,7 +36,8 @@ mkdir -p $VENDORED_INCLUDE
 cp -a "$VENDORED_OPENCV/lib/." $VENDORED_LIB
 cp -r "$VENDORED_OPENCV/include/" $VENDORED_INCLUDE
 
-cp /app/vendor/opencv/include/opencv2/core/* /app/vendor/opencv/include/opencv2/
+find /app/vendor/opencv/include -type f -name '*.hpp' -exec cp {} /app/vendor/opencv/include/opencv2/  \;
+find /app/vendor/opencv/include -type f -name '*.hpp' -exec cp {} /app/vendor/opencv/include/opencv/  \;
 
 ls -laR $VENDORED_OPENCV
 
