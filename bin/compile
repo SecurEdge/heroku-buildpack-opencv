@@ -12,6 +12,7 @@ subtitle() {
   echo "       $*"
 }
 
+pwd
 
 # parse params
 BUILD_DIR=$1
