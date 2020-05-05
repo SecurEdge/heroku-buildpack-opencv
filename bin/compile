@@ -36,6 +36,8 @@ mkdir -p $VENDORED_INCLUDE
 cp -a "$VENDORED_OPENCV/lib/." $VENDORED_LIB
 cp -r "$VENDORED_OPENCV/include/" $VENDORED_INCLUDE
 
+cp /app/vendor/opencv/include/opencv2/core/* /app/vendor/opencv/include/opencv2/
+
 ls -laR $VENDORED_OPENCV
 
 export PKG_CONFIG_PATH="/app/vendor/opencv/lib/pkgconfig:$PKG_CONFIG_PATH"
