@@ -12,15 +12,11 @@ subtitle() {
   echo "       $*"
 }
 
-pwd
-
 # parse params
 BUILD_DIR=$1
 CACHE_DIR=$2
 
-
-BUILD_DIR=$1
-CACHE_DIR=$2
+echo $BUILD_DIR
 
 export LD_LIBRARY_PATH="$BUILD_DIR/.heroku/vendor/lib"
 export PATH="$BUILD_DIR/.heroku/vendor/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
