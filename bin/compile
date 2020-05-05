@@ -32,8 +32,8 @@ tar -xvf $CACHE_DIR/vendor.tar.bz2 -C $BUILD_DIR
 
 mkdir -p /app/vendor/opencv/lib /app/vendor/opencv/include
 
-cp -r $BUILD_DIR/.heroku/vendor/lib /app/vendor/opencv/lib
-cp -r $BUILD_DIR/.heroku/vendor/include /app/vendor/opencv/include
+cp -r $BUILD_DIR/.heroku/vendor/lib/* /app/vendor/opencv/lib
+cp -r $BUILD_DIR/.heroku/vendor/include/* /app/vendor/opencv/include
 
 # vendor
 echo "-----> Vendoring OpenCV shared objects into slug"
