@@ -35,6 +35,7 @@ mkdir -p /app/vendor/opencv/lib /app/vendor/opencv/include
 cp -r $BUILD_DIR/.heroku/vendor/lib/* /app/vendor/opencv/lib
 cp -r $BUILD_DIR/.heroku/vendor/include/* /app/vendor/opencv/include
 
+
 # vendor
 echo "-----> Vendoring OpenCV shared objects into slug"
 VENDORED_LIB="$BUILD_DIR/vendor/opencv/lib"
@@ -43,3 +44,5 @@ VENDORED_INCLUDE="$BUILD_DIR/vendor/opencv/include"
 echo '!'
 
 ls /app/vendor/opencv/lib
+
+LD_LIBRARY_PATH=/app/.heroku/vendor/lib/
