@@ -31,6 +31,9 @@ fi
 subtitle "Unpacking..."
 tar -xvf $CACHE_DIR/vendor.tar.bz2 -C $BUILD_DIR
 
+cp -r $BUILD_DIR/vendor/opencv/lib /app/vendor/opencv/lib
+cp -r $BUILD_DIR/vendor/opencv/include /app/vendor/opencv/include
+
 # vendor
 echo "-----> Vendoring OpenCV shared objects into slug"
 VENDORED_LIB="$BUILD_DIR/vendor/opencv/lib"
