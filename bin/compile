@@ -35,13 +35,6 @@ mkdir -p /app/vendor/opencv/lib /app/vendor/opencv/include
 cp -r $BUILD_DIR/.heroku/vendor/lib/* /app/vendor/opencv/lib
 cp -r $BUILD_DIR/.heroku/vendor/include/* /app/vendor/opencv/include
 
-
-wget -q -O /tmp/libpng12.deb http://mirrors.kernel.org/ubuntu/pool/main/libp/libpng/libpng12-0_1.2.54-1ubuntu1_amd64.deb \
-  && dpkg -i /tmp/libpng12.deb \
-  && rm /tmp/libpng12.deb
-
-cp /usr/lib/x86_64-linux-gnu/libpng12.so.0 /app/.heroku/vendor/lib/
-
 # vendor
 echo "-----> Vendoring OpenCV shared objects into slug"
 VENDORED_LIB="$BUILD_DIR/vendor/opencv/lib"
